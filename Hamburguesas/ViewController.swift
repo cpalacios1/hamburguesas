@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let coleccionPaises: ColeccionDePaises = ColeccionDePaises()
+    let coleccionHamburguesa: ColeccionDeHamburguesas = ColeccionDeHamburguesas()
+    @IBOutlet weak var pais: UILabel!
+    @IBOutlet weak var hamburguesa: UILabel!
+    
+    @IBAction func obtenHamburguesa() {
+        
+        pais.text = coleccionPaises.obtenPais()
+        hamburguesa.text = coleccionHamburguesa.obtenHamburguesa()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
